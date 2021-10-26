@@ -1,0 +1,26 @@
+
+    <header>
+  <nav class="navbar navbar-expand-lg">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="toggle-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="collapse navbar-collapse" id="navbar-content">
+        <ul class="navbar-nav">
+        <% if user_signed_in? %>
+        <%= link_to 'Home', root_path, class:"nav-link"%>
+          <%= link_to 'About', home_about_path, class:"nav-link"%>
+           <%= link_to 'Posts', posts_path, class:"nav-link"%>
+           <%= link_to 'Sign Out', destroy_user_session_path,method: :delete, class:"nav-link"%>
+            <%= link_to 'Edit Profile', edit_user_registration_path, class:"nav-link"%>
+            <% else %>
+              <%= link_to 'Sign In', new_user_session_path, class:"nav-link"%>
+          <%= link_to 'Sign Up', new_user_registration_path, class:"nav-link"%>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    <div class="box">
+        <div class="box-1"></div>
+        <div class="box-2"></div>
+      </div>
+    </header>
