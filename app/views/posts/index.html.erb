@@ -16,7 +16,7 @@
      <% @posts.each do |post| %>
       <td><%= post.post_name %></td>
       <td><%= post.description %></td>
-      <td><%= post.photo %></td>
+      <td> <image src="<%= (url_for(post.photo))%>" width="100" height="100" style="border-radius: 50%; width: 30px; height: 30px;"></td>
       <td><%= link_to 'Show', post, class:"btn btn-primary"%> 
       <%= link_to 'Edit', edit_post_path(post), class:"btn btn-success"%>
       <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %></td>

@@ -4,8 +4,11 @@
   <div class="container">
     <h1 class="display-4"><%= @post.post_name %></h1>
     <p class="lead"><%= @post.description %></p>
-       <p class="lead"> <%= @post.photo %></p>
+    
+    <image src="<%= (url_for(@post.photo))%>" style="border-radius: 50%; width: 200px; height: 200px;">
+ 
   </div>
+  <br>
   <%= link_to 'Edit', edit_post_path(@post), class:"btn btn-primary"%>
 <%= link_to 'Back', posts_path, class:"btn btn-success" %>
 </div>
